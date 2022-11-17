@@ -7,7 +7,7 @@
 <?php 
 $check = false;
 $name = $_POST['name'];
-$fh = fopen("a.txt","r")or die("Can't open file");
+$fh = fopen("1000.txt","r")or die("Can't open file");
 while(!feof($fh))
 {
 $line = fgets($fh);
