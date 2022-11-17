@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
-    }
-    
     stage('Docker compose') {
       steps {
-        sh "docker compose up"
+        sh "docker compose -f docker-compose.yml up --build"
       }
     }
     
